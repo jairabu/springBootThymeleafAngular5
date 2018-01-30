@@ -16,15 +16,13 @@ To run Angular 5 frontend:
 - Replace src folder 
 - ng serve --open (will open at http://localhost:4200)
 
-Read the [Getting started page](https://getbootstrap.com/docs/4.0/getting-started/introduction/) for information on the framework contents, templates and examples, and more.
-
 ## Screenshot Thymeleaf
 ![Alt text](https://github.com/jairabu/springBootThymeleafAngular5/blob/master/Thymeleaf.PNG?raw=true "Thymeleaf Screenshot")
 
 ## Screenshot Angular 5 
 ![Alt text](https://github.com/jairabu/springBootThymeleafAngular5/blob/master/Angular5.PNG?raw=true "Angular 5 Screenshot")
 
-## Creators
+## Creator
 
 **Jair Alarcón**
 - E-mail: jairabu@gmail.com
