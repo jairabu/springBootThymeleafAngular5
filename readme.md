@@ -1,3 +1,5 @@
+A simple example of a CRUD application in Java using Spring Boot, Hibernate, Thymeleaf and Angular 5.
+
 ## Quick start
 
 To run Spring Boot backend:
