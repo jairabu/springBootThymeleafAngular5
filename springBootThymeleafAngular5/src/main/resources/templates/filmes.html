@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Bootstrap Example</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+body {
+	padding-top: 10px;
+}
+
+@media ( max-width : 980px) {
+	body {
+		padding-top: 0;
+	}
+}
+</style>
+</head>
+
+<body>
+	<div class="container">
+		<div class="panel-group">
+			<div class="panel panel-default">
+				<form th:object="${filme}" method="post">
+					<div class="panel-heading">Cadastro de Filmes</div>
+					<div class="panel-body">
+						<div class="row">
+							<input type="hidden" th:field="*{id}" class="form-control"
+								id="filmeId" />
+
+							<div class="form-group col-sm-3">
+								<label for="filmeNome">Nome</label><input type="text"
+									th:field="*{nome}" class="form-control" id="filmeNome" />
+							</div>
+
+							<div class="form-group col-sm-3">
+								<label for="filmeAno">Ano</label><input type="number"
+									th:field="*{ano}" min="0" max="9999" class="form-control"
+									id="filmeAno" />
+							</div>
+
+							<div class="form-group col-sm-3">
+								<label for="filmeNota">Nota</label><input type="number"
+									th:field="*{nota}" min="0" max="10" class="form-control"
+									id="filmeNota" />
+							</div>
+						</div>
+					</div>
+					<div class="panel-footer">
+						<div class="input-group-prepend">
+							<button class="btn btn-success" type="submit" name="salvar">Salvar</button>							
+							<button class="btn btn-danger" type="submit" name="remover">Remover</button>
+							<a href="/filmes/cancelar" class="btn btn-default" role="button"
+								aria-disabled="true">Cancelar</a>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="panel-group">
+			<div class="panel panel-default">
+				<div class="panel-heading">Filmes Cadastrados</div>
+				<div class="panel-body">
+					<table class="table table-striped table-hover .table-bordered"
+						id="filmesTabela">
+						<thead>
+							<tr>
+								<th th:text="Nome"></th>
+								<th th:text="Ano"></th>
+								<th th:text="Nota"></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr th:each="filme: ${filmes}" class="clickable-row"
+								th:onclick="'window.location=\'/filmes/editar/'+ ${filme.id} +'\';'">
+								<td th:text="${filme.nome}"></td>
+								<td th:text="${filme.ano}"></td>
+								<td th:text="${filme.nota}"></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
