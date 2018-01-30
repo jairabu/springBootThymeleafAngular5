@@ -1,6 +1,6 @@
 ## Quick start
 
-Several quick start options are available:
+To run Spring Boot backend:
 
 - Install PostgreSQL and create a database called "filmes"
 - Update the password of the database at the file persistence.xml 
@@ -19,10 +19,10 @@ To run Angular 5 frontend:
 Read the [Getting started page](https://getbootstrap.com/docs/4.0/getting-started/introduction/) for information on the framework contents, templates and examples, and more.
 
 ## Screenshot Thymeleaf
-<img src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" alt="" width=72 height=72>
+![Alt text](https://github.com/jairabu/springBootThymeleafAngular5/blob/master/Thymeleaf.PNG?raw=true "Thymeleaf Screenshot")
 
 ## Screenshot Angular 5 
-<img src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" alt="" width=72 height=72>
+![Alt text](https://github.com/jairabu/springBootThymeleafAngular5/blob/master/Angular5.PNG?raw=true "Angular 5 Screenshot")
 
 ## Creators
 
